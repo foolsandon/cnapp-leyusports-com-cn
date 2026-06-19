@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼体育 · 值得再次打开的陪伴</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f9fc;
+      color: #1e2f3d;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero 区 */
+    .hero {
+      background: linear-gradient(145deg, #e0f0f0 0%, #c7e3e3 100%);
+      padding: 64px 0 56px;
+      border-radius: 0 0 48px 48px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 12px rgba(40, 100, 100, 0.06);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0d3d3d;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #2b4f4f;
+      max-width: 640px;
+      margin-bottom: 28px;
+      opacity: 0.85;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #1f6f6f;
+      color: white;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(31, 111, 111, 0.2);
+    }
+
+    /* 优势区 — 网格卡片 */
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 550;
+      margin: 48px 0 28px;
+      color: #164040;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 4px;
+      background: #3b8f8f;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 4px 18px rgba(40, 90, 90, 0.05);
+      border: 1px solid #dcecec;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 28px rgba(30, 80, 80, 0.08);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 550;
+      color: #0f4343;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3 span {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .card p {
+      color: #2f4a4a;
+      font-size: 0.98rem;
+    }
+
+    /* 说明区 — 内容块 */
+    .intro-block {
+      background: white;
+      border-radius: 28px;
+      padding: 36px 32px;
+      margin: 40px 0;
+      border: 1px solid #d6e8e8;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .intro-block p {
+      font-size: 1.05rem;
+      color: #1f3a3a;
+      margin-bottom: 18px;
+    }
+
+    .intro-block .highlight-link {
+      color: #1c6e6e;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 2px solid #9acfcf;
+      transition: border-color 0.15s;
+    }
+
+    .intro-block .highlight-link:hover {
+      border-bottom-color: #1c6e6e;
+    }
+
+    .intro-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+    }
+
+    .intro-block li {
+      position: relative;
+      padding-left: 22px;
+      color: #1f3a3a;
+    }
+
+    .intro-block li::before {
+      content: "⏺";
+      position: absolute;
+      left: 0;
+      color: #3b8f8f;
+      font-size: 0.8rem;
+      top: 2px;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      background: #e6f2f2;
+      border-radius: 28px;
+      padding: 32px 30px;
+      margin: 40px 0;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #0d3d3d;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 16px;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      color: #164040;
+      margin-bottom: 4px;
+      font-size: 1.02rem;
+    }
+
+    .faq-item p {
+      color: #2b4f4f;
+      font-size: 0.95rem;
+      padding-left: 4px;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      border-top: 1px solid #cde0e0;
+      padding: 32px 0 40px;
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.92rem;
+      color: #3f6868;
+    }
+
+    .footer-links a {
+      color: #1c6e6e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b0d0d0;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #1c6e6e;
+    }
+
+    .footer-links .sep {
+      margin: 0 14px;
+      color: #b3cccc;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 48px 0 44px;
+        border-radius: 0 0 32px 32px;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+
+      .intro-block {
+        padding: 28px 20px;
+      }
+
+      .faq-summary {
+        padding: 24px 20px;
+      }
+
+      .grid-cards {
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero 区 -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>再次打开，就像老朋友一样</h1>
+      <p>有些页面值得放入收藏夹，隔段时间回来看看。乐鱼体育就是这样一处安静、熟悉的角落——不喧哗，但总有内容让你觉得没白来。</p>
+      <span class="hero-tag">✦ 收藏 · 回访 · 日常</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <!-- 优势区 网格卡片 -->
+    <h2 class="section-title">为什么一再回来</h2>
+    <div class="grid-cards">
+      <div class="card">
+        <h3><span>🔄</span> 更新有节奏</h3>
+        <p>内容不会一夜之间面目全非，但每次回来都能发现一些新的细节或调整，熟悉中带着新鲜感。</p>
+      </div>
+      <div class="card">
+        <h3><span>📌</span> 收藏即记忆</h3>
+        <p>把链接放进浏览器的书签栏，就像在某个角落留了个标记。下次再点开，不需要重新搜索，直接回到这里。</p>
+      </div>
+      <div class="card">
+        <h3><span>🧘</span> 不打扰的设计</h3>
+        <p>没有弹窗、没有强制推送。页面干净克制，连配色都是蓝绿调的柔和感，看着不累。</p>
+      </div>
+      <div class="card">
+        <h3><span>🌿</span> 持续但安静</h3>
+        <p>好的陪伴往往是低频但稳定的存在。你不必每天都来，但你知道它一直在。</p>
+      </div>
+    </div>
+
+    <!-- 说明区：从收藏与回访角度展开 -->
+    <div class="intro-block">
+      <p>
+        很多人习惯把常去的站点放在书签文件夹里，时间久了就成了数字生活的一部分。<a href="https://cnapp-leyusports.com.cn" class="highlight-link">乐鱼体育</a>就是那种你愿意留在收藏夹里的站点——没有花哨的噱头，界面清爽，访问流畅，适合在某个想放松的午后点开看看。
+      </p>
+      <p>
+        每次回来，你不需要重新适应。页面结构保持稳定，内容围绕体育与生活慢慢更新。如果你之前收藏过，现在再打开，会发现细节更加体贴，响应速度也更快了。
+      </p>
+      <ul>
+        <li>适合放在浏览器书签或手机主屏幕</li>
+        <li>长期维护，风格一致</li>
+        <li>无冗余信息，聚焦核心体验</li>
+        <li>移动端与桌面同样友好</li>
+      </ul>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+      <h2>常见疑问 · 简短回答</h2>
+      <div class="faq-item">
+        <strong>页面会频繁改版吗？</strong>
+        <p>不会。设计上偏向保守迭代，每次调整都以提升阅读和浏览体验为目标，极少推翻重来。</p>
+      </div>
+      <div class="faq-item">
+        <strong>收藏后还需要重新登录吗？</strong>
+        <p>通常不需要额外操作。直接点击书签即可进入，保持浏览器 cookie 即可维持状态。</p>
+      </div>
+      <div class="faq-item">
+        <strong>内容更新的频率大概是？</strong>
+        <p>没有固定排期，但会持续有细节优化和新内容加入。适合隔一两周回来一次，每次都有小惊喜。</p>
+      </div>
+      <div class="faq-item">
+        <strong>在手机上体验如何？</strong>
+        <p>页面针对手机屏幕做了适配，卡片布局和字体大小都经过调整，单手操作也很方便。</p>
+      </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+      <span>你已经记住了这个地址：</span>
+      <a href="https://cnapp-leyusports.com.cn">乐鱼体育</a>
+      <span class="sep">·</span>
+      <span>收藏它，就像在数字世界里留一个安静的位置</span>
+    </div>
+
+  </div>
+</body>
+</html>
